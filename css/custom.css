@@ -1,0 +1,57 @@
+:root {
+	--Grey: #F5F0EC;
+	--Black: #111111;
+	--Green: #1B5B31;
+	--Beige: #DCC1AB;
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url(../resources/fonts/Montserrat.ttf);
+}
+
+@font-face {
+	font-family: Inter;
+	src: url(../resources/fonts/Inter.ttf);
+}
+
+body {
+	font-family: Inter, "sans-serif";
+	font-weight: 400;
+	font-size: 16;
+	color: var(--Black);
+}
+
+h1 {
+	font-family: Montserrat, "sans-serif";
+	font-weight: 500;
+	font-size: 60px;
+}
+
+#hero, #realisations {
+	background-color: var(--Beige);
+}
+
+#offer, #instagram {
+	background-color:  var(--Grey);
+}
+
+#about, .instagram_inner {
+	background-color: var(--Green);
+}
+
+footer {
+	background-color: var(--Black);
+
+}
+
+/* Overrides */
+
+.ovr-card-icon {
+	max-height: 44px;
+	max-width: 44px;
+}
+
+.ovr-font-light {
+	color: var(--Grey);
+}
