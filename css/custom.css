@@ -18,14 +18,66 @@
 body {
 	font-family: Inter, "sans-serif";
 	font-weight: 400;
-	font-size: 16;
+	font-size: 16px;
 	color: var(--Black);
+	overflow-x: hidden;
 }
 
 h1 {
 	font-family: Montserrat, "sans-serif";
 	font-weight: 500;
 	font-size: 60px;
+}
+
+h2 {
+	font-family: Montserrat, "sans-serif";
+	font-size: 48px;
+}
+
+/* h3 znajduje użycie jedynie w sekcji instagrama */
+h3 {
+	font-family: Montserrat, "sans-serif";
+	font-size: 40px;
+}
+
+h5 {
+	font-family: Montserrat, "sans-serif";
+	font-size: 28px;
+}
+
+i {
+	font-family: Inter, "sans-serif";
+	font-style: oblique 10deg;
+}
+
+small {
+	font-size: 12px;
+	font-family: Inter, "sans-serif";
+	font-weight: 400;
+}
+
+#hero {
+	height: 737px;
+}
+
+#offer {
+	height: 939;
+	padding-top: 120px;
+	padding-bottom: 160px;
+}
+
+#about {
+	height: 720px;
+}
+/* 
+#instagram {
+	height: 478px;
+} */
+
+#instagram > div {
+	background-color: var(--Green);
+	color: var(--Grey);
+	padding: 120px 110px;
 }
 
 #hero, #realisations {
@@ -36,22 +88,112 @@ h1 {
 	background-color:  var(--Grey);
 }
 
+#offer > div.row > div.col > a.card  {
+	text-decoration: initial;
+}
+
+.dropdown-menu.show {
+	animation: 0.3s ease-out appear;
+}
+
+@keyframes appear {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+}
+
+.card > p {
+	text-decoration: underline;
+}
+
+#offer .card {
+	box-shadow: none;
+	transition: box-shadow 1s;
+}
+
+#offer .card:hover {
+	box-shadow: 5px 0px 10px darkgray, -5px -0px 10px darkgray,  0px 5px 10px darkgray, 0px -5px 10px darkgray;
+}
+
 #about, .instagram_inner {
 	background-color: var(--Green);
 }
 
 footer {
 	background-color: var(--Black);
+	height: 499px;
+}
 
+footer a {
+	color: var(--Grey);
+	text-decoration: none;;
+}
+
+footer .btn {
+	background-color: var(--Green);
+}
+
+.grid-item {
+	width: 30%;
+	margin: 1.5rem 0px;
+}
+
+.gutter-sizer {
+	width: 5%;
 }
 
 /* Overrides */
 
 .ovr-card-icon {
-	max-height: 44px;
-	max-width: 44px;
+	height: 44px;
+	width: auto;
 }
 
 .ovr-font-light {
 	color: var(--Grey);
+}
+
+.ovr-card {
+	height: 370px;
+	width: 378px;
+	padding: 48px 40px;
+}
+
+.text-montserrat {
+	font-family: Montserrat, "sans-serif";
+}
+
+.text-inter {
+	font-family: Inter, "sans-serif";
+}
+
+.card-text {
+	font-family: Inter, "sans-serif";
+	font-size: 14px;
+}
+
+/* Media query overrides */
+
+@media screen and (max-width: 959px) {
+
+	#hero {
+		background: url(../resources/images/offer_bg.png);
+		background-size: cover;
+	}
+
+	#hero > div > * {
+		background-color: var(--Beige);
+	}
+
+	#about {
+		background: url(../resources/images/about_bg.png);
+		background-size: cover;
+	}
+
+	#about > div > * {
+		background-color: var(--Green);
+	}
 }
